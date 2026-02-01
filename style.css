@@ -1,0 +1,30 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    padding-top: 50px;
+    transition: background 0.3s ease;
+}
+
+.btn-box {
+    margin-top: 2rem;
+}
+
+.btn {
+    padding: 12px 18px;
+    margin: 10px;
+    border: none;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s ease;
+}
+
+.red { background: #e63946; }
+.blue { background: #457b9d; }
+.green { background: #2a9d8f; }
+.yellow { background: #e9c46a; color: black; }
+
+.btn:hover {
+    transform: translateY(-3px);
+}
