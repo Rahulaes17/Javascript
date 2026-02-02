@@ -1,0 +1,40 @@
+body {
+    text-align: center;
+    padding-top: 60px;
+    font-family: sans-serif;
+    background: #f1f1f1;
+}
+
+.counter-box {
+    background: white;
+    padding: 40px;
+    width: 250px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+#count {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.btns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    background: black;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #333;
+}
