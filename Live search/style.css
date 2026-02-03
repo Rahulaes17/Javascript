@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 2rem;
+    background: #f4f4f4;
+}
+
+.container {
+    max-width: 400px;
+    margin: auto;
+}
+
+#searchBox {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    border: 2px solid #222;
+    border-radius: 5px;
+}
+
+ul {
+    margin-top: 1rem;
+    background: white;
+    border-radius: 5px;
+    padding: 1rem;
+    list-style: none;
+}
+
+li {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+li:last-child {
+    border: none;
+}
+
+.no-results {
+    text-align: center;
+    padding: 1rem;
+    color: #999;
+    font-style: italic;
+}
