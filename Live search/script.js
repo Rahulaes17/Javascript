@@ -1,5 +1,4 @@
-// Initial data
-let names = [
+const names = [
     "Rahul",
     "Rohit",
     "Ramesh",
@@ -8,14 +7,17 @@ let names = [
     "Amit",
     "Karan",
     "Sumit",
-    "Vikram"
+    "Vikram",
+    "Arjun",
+    "Manish",
+    "Sanjay"
 ];
 
-let searchBox = document.getElementById("searchBox");
-let nameList = document.getElementById("nameList");
+const searchBox = document.getElementById("searchBox");
+const nameList = document.getElementById("nameList");
 
-// Function to show names
-function renderList(arr) {
+// RENDER LIST
+function renderList(arr, query = "") {
     nameList.innerHTML = "";
 
     if (arr.length === 0) {
@@ -24,25 +26,32 @@ function renderList(arr) {
     }
 
     arr.forEach(name => {
-        let li = document.createElement("li");
-        li.textContent = name;
+        const li = document.createElement("li");
+
+        // highlight matched text
+        if (query) {
+            const regex = new RegExp(query, "gi");
+            li.innerHTML = name.replace(regex, match => `<span class="highlight">${match}</span>`);
+        } else {
+            li.textContent = name;
+        }
+
         nameList.appendChild(li);
     });
 }
 
-// Filter function
+// FILTER LIST
 function filterNames() {
-    let text = searchBox.value.toLowerCase();
+    const text = searchBox.value.trim().toLowerCase();
 
-    let filtered = names.filter(n =>
+    const filtered = names.filter(n =>
         n.toLowerCase().includes(text)
     );
 
-    renderList(filtered);
+    renderList(filtered, text);
 }
 
-// Event: Live typing
 searchBox.addEventListener("input", filterNames);
 
-// Show full list initially
+// INITIAL LIST
 renderList(names);
