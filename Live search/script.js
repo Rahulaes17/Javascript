@@ -44,9 +44,7 @@ function renderList(arr, query = "") {
 function filterNames() {
     const text = searchBox.value.trim().toLowerCase();
 
-    const filtered = names.filter(n =>
-        n.toLowerCase().includes(text)
-    );
+    const filtered = names.filter(n =>n.toLowerCase().includes(text));
 
     renderList(filtered, text);
 }

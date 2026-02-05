@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 30px;
+}
+
+#para {
+    padding: 20px;
+    background: lightgray;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.highlight {
+    background-color: gold !important;
+    border: 3px solid black;
+}
+
+.blue-text {
+    color: blue;
+    font-weight: bold;
+}
+
+#output {
+    margin-top: 20px;
+    padding: 15px;
+    background: #eee;
+    border-radius: 10px;
+}
