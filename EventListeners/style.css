@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+.intro{
+    background-color: rgb(3, 1, 70);
+}
+
 .intro h1 {
     width: 100%;
     text-align: center;
