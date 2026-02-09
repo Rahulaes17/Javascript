@@ -200,25 +200,25 @@ for (let i = 0; i < students.length; i++) {
     console.log(`${students[i].name}`, ":", `${students[i].hiring}`)
 }
 
-function countHiring(students) {
-    let hired = 0;
-    let applicable = 0;
-    let notApplicable = 0;
+// function countHiring(students) {
+//     let hired = 0;
+//     let applicable = 0;
+//     let notApplicable = 0;
 
-    students.forEach(student => {
-        if (student.hiring === "hired") {
-            hired += 1
-        }
-        else if (student.hiring === "Applicable") {
-            applicable += 1
-        }
-        else {
-            notApplicable += 1
-        }
-    })
-    return { hired, applicable, notApplicable };
-}
-console.log(countHiring(students));
+//     students.forEach(student => {
+//         if (student.hiring === "hired") {
+//             hired += 1
+//         }
+//         else if (student.hiring === "Applicable") {
+//             applicable += 1
+//         }
+//         else {
+//             notApplicable += 1
+//         }
+//     })
+//     return { hired, applicable, notApplicable };
+// }
+// console.log(countHiring(students));
 
 
 
@@ -236,3 +236,37 @@ function getToppers(students){
 }
 const toppers = getToppers(students);
 console.log(toppers);
+
+
+const eligible = students.filter(student => student.cgpa>=8.00)
+console.log(eligible)
+
+
+
+
+
+//Create an array of CGPAs only from students
+
+const cgpa = students.map(student => student.cgpa)
+console.log(cgpa);
+
+
+//counting hiring using reduce
+
+const totalCount = students.reduce((countHiring , student) =>{
+    if(student.hiring === "hired"){
+        countHiring.hired++
+    }
+    else if(student.hiring === "Applicable"){
+        countHiring.applicable++
+    }
+    else{
+        countHiring.notApplicable++
+    }
+    return countHiring;
+}, {
+    hired :0,
+    applicable:0,
+    notApplicable:0
+})
+console.log(totalCount)
