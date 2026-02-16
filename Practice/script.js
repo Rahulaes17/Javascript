@@ -270,3 +270,25 @@ const totalCount = students.reduce((countHiring , student) =>{
     notApplicable:0
 })
 console.log(totalCount)
+
+
+
+const numbers = [4, 7, 2, 9, 12, 15, 6, 3];
+const even = numbers.filter(num => num % 2 === 0);
+const odd = numbers.filter(num => num % 2 !== 0);
+const sum = numbers.reduce((total, num) => {
+    return total + num;
+}, 0);
+
+const largest = numbers.reduce((max, num) => {
+    return num > max ? num : max;
+}, numbers[0]);
+
+const resultr = {
+    even,
+    odd,
+    sum,
+    largest
+};
+
+console.log(resultr);
